@@ -36,6 +36,7 @@
             this.loginbtn = new System.Windows.Forms.Button();
             this.clearbtn = new System.Windows.Forms.Button();
             this.exitbtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -73,20 +74,20 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(141, 184);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(335, 22);
+            this.textBox1.Size = new System.Drawing.Size(316, 22);
             this.textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(141, 246);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(335, 22);
+            this.textBox2.Size = new System.Drawing.Size(316, 22);
             this.textBox2.TabIndex = 4;
             // 
             // loginbtn
             // 
             this.loginbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginbtn.Location = new System.Drawing.Point(400, 344);
+            this.loginbtn.Location = new System.Drawing.Point(252, 344);
             this.loginbtn.Name = "loginbtn";
             this.loginbtn.Size = new System.Drawing.Size(76, 28);
             this.loginbtn.TabIndex = 5;
@@ -96,7 +97,7 @@
             // clearbtn
             // 
             this.clearbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(263, 344);
+            this.clearbtn.Location = new System.Drawing.Point(141, 344);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(76, 28);
             this.clearbtn.TabIndex = 6;
@@ -106,18 +107,29 @@
             // exitbtn
             // 
             this.exitbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitbtn.Location = new System.Drawing.Point(123, 344);
+            this.exitbtn.Location = new System.Drawing.Point(36, 344);
             this.exitbtn.Name = "exitbtn";
             this.exitbtn.Size = new System.Drawing.Size(76, 28);
             this.exitbtn.TabIndex = 7;
             this.exitbtn.Text = "exit";
             this.exitbtn.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(369, 344);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 28);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "New account";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.exitbtn);
             this.Controls.Add(this.clearbtn);
             this.Controls.Add(this.loginbtn);
@@ -143,5 +155,6 @@
         private System.Windows.Forms.Button loginbtn;
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Button exitbtn;
+        private System.Windows.Forms.Button button1;
     }
 }

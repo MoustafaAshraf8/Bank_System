@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="DBaccessClass.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="NewAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewAccountForm.Designer.cs">
+      <DependentUpon>NewAccountForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OpenningForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     <Compile Include="User_WithdrawForm.Designer.cs">
       <DependentUpon>User_WithdrawForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="NewAccountForm.resx">
+      <DependentUpon>NewAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OpenningForm.resx">
       <DependentUpon>OpenningForm.cs</DependentUpon>
     </EmbeddedResource>
