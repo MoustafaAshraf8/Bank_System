@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="DBaccessClass.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="OpenningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenningForm.Designer.cs">
+      <DependentUpon>OpenningForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="Teller.cs" />
     <Compile Include="Teller_BalanceForm.cs">
@@ -86,6 +92,7 @@
     <Compile Include="Teller_WithdrawForm.Designer.cs">
       <DependentUpon>Teller_WithdrawForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="User_DepositeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +137,9 @@
     <Compile Include="User_WithdrawForm.Designer.cs">
       <DependentUpon>User_WithdrawForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="OpenningForm.resx">
+      <DependentUpon>OpenningForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Teller_BalanceForm.resx">
       <DependentUpon>Teller_BalanceForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -21,3 +21,4 @@ C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\obj\Debug\WindowsFormsApp1
 C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_BalanceForm.resources
 C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Form.resources
 C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_WithdrawForm.resources
+C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.OpenningForm.resources

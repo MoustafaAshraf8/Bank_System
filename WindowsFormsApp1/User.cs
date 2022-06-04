@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    internal class User : Person
+    class User : Person
     {
         private string WorkingDirection;
         private string Salary;

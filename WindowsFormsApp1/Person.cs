@@ -12,6 +12,8 @@ namespace WindowsFormsApp1
         private string NationalID;
         private string Address;
         private string PhoneNumber;
+        private string Username;
+        private string Password;
 
         public string name
         {
@@ -33,6 +35,17 @@ namespace WindowsFormsApp1
             set { PhoneNumber = value; }
             get { return PhoneNumber;}
         }
+        public string username
+        {
+            set { Username = value; }
+            get { return Username;}
+        }
+        public string password
+        {
+            set { Username = value; }
+            get { return Username; }
+        }
+
 
         public Person()
         {
