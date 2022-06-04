@@ -32,5 +32,24 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public static void ShowBalance(int ID)
+        {
+
+        }
+        public static void Depositeuser(int ID)
+        {
+            
+        }
+        public static void Withdrawuser(int ID)
+        {
+           
+        }
+        public static void Transfereuser(int ID)
+        {
+            
+        }
     }
 }
