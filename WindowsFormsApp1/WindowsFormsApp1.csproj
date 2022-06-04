@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CFC803C-FD59-4BB5-8B0B-37CEA14E7A5D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBaccessClass.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Teller.cs" />
+    <Compile Include="Teller_BalanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teller_BalanceForm.Designer.cs">
+      <DependentUpon>Teller_BalanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teller_CreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teller_CreateForm.Designer.cs">
+      <DependentUpon>Teller_CreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teller_DeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teller_DeleteForm.Designer.cs">
+      <DependentUpon>Teller_DeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teller_DepositeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teller_DepositeForm.Designer.cs">
+      <DependentUpon>Teller_DepositeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teller_TransfereForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teller_TransfereForm.Designer.cs">
+      <DependentUpon>Teller_TransfereForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teller_WithdrawForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teller_WithdrawForm.Designer.cs">
+      <DependentUpon>Teller_WithdrawForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_DepositeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_DepositeForm.Designer.cs">
+      <DependentUpon>User_DepositeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Teller_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teller_Form.Designer.cs">
+      <DependentUpon>Teller_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_TransfereForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_TransfereForm.Designer.cs">
+      <DependentUpon>User_TransfereForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_BalanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_BalanceForm.Designer.cs">
+      <DependentUpon>User_BalanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Form.Designer.cs">
+      <DependentUpon>User_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_WithdrawForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_WithdrawForm.Designer.cs">
+      <DependentUpon>User_WithdrawForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Teller_BalanceForm.resx">
+      <DependentUpon>Teller_BalanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teller_CreateForm.resx">
+      <DependentUpon>Teller_CreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teller_DeleteForm.resx">
+      <DependentUpon>Teller_DeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teller_DepositeForm.resx">
+      <DependentUpon>Teller_DepositeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teller_TransfereForm.resx">
+      <DependentUpon>Teller_TransfereForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teller_WithdrawForm.resx">
+      <DependentUpon>Teller_WithdrawForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_DepositeForm.resx">
+      <DependentUpon>User_DepositeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Teller_Form.resx">
+      <DependentUpon>Teller_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_TransfereForm.resx">
+      <DependentUpon>User_TransfereForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_BalanceForm.resx">
+      <DependentUpon>User_BalanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Form.resx">
+      <DependentUpon>User_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_WithdrawForm.resx">
+      <DependentUpon>User_WithdrawForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\424923.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
