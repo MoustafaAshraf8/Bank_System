@@ -22,6 +22,11 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-
+        private void button5_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            this.Hide();
+            loginForm.ShowDialog();
+        }
     }
 }

@@ -121,6 +121,7 @@
             this.button5.TabIndex = 11;
             this.button5.Text = "Logout";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // BalanceRadio
             // 
@@ -172,7 +173,7 @@
             this.button1.Text = "Proceed ->";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // UserForm
+            // User_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -190,7 +191,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.namelabel);
             this.Controls.Add(this.label1);
-            this.Name = "UserForm";
+            this.Name = "User_Form";
             this.Text = "UserForm";
             this.ResumeLayout(false);
             this.PerformLayout();

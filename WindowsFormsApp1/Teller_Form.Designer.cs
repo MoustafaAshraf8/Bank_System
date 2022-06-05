@@ -43,8 +43,9 @@
             this.BalanceRadio = new System.Windows.Forms.RadioButton();
             this.CreateRadio = new System.Windows.Forms.RadioButton();
             this.DeleteRadio = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.logoutbtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.errorlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -72,6 +73,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(12, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 29);
@@ -198,15 +200,15 @@
             this.DeleteRadio.TabStop = true;
             this.DeleteRadio.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // logoutbtn
             // 
-            this.button1.Location = new System.Drawing.Point(372, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 33);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "logout";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.logoutbtn.Location = new System.Drawing.Point(365, 12);
+            this.logoutbtn.Name = "logoutbtn";
+            this.logoutbtn.Size = new System.Drawing.Size(59, 33);
+            this.logoutbtn.TabIndex = 15;
+            this.logoutbtn.Text = "logout";
+            this.logoutbtn.UseVisualStyleBackColor = true;
+            this.logoutbtn.Click += new System.EventHandler(this.logoutbtn_Click);
             // 
             // button2
             // 
@@ -216,14 +218,25 @@
             this.button2.TabIndex = 16;
             this.button2.Text = "Proceed->";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // errorlabel
+            // 
+            this.errorlabel.AutoSize = true;
+            this.errorlabel.ForeColor = System.Drawing.Color.Red;
+            this.errorlabel.Location = new System.Drawing.Point(129, 363);
+            this.errorlabel.Name = "errorlabel";
+            this.errorlabel.Size = new System.Drawing.Size(0, 16);
+            this.errorlabel.TabIndex = 17;
             // 
             // Teller_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 398);
+            this.Controls.Add(this.errorlabel);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.logoutbtn);
             this.Controls.Add(this.DeleteRadio);
             this.Controls.Add(this.CreateRadio);
             this.Controls.Add(this.BalanceRadio);
@@ -263,7 +276,8 @@
         private System.Windows.Forms.RadioButton BalanceRadio;
         private System.Windows.Forms.RadioButton CreateRadio;
         private System.Windows.Forms.RadioButton DeleteRadio;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button logoutbtn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label errorlabel;
     }
 }

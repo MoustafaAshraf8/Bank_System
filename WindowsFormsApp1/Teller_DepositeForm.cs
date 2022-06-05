@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+    
     public partial class Teller_DepositeForm : Form
     {
+        public int id;
         public Teller_DepositeForm()
         {
             InitializeComponent();
+        }
+        public Teller_DepositeForm(int n,string x)
+        {
+            InitializeComponent();
+            userlabel.Text = x;
+            id = n;
         }
     }
 }
