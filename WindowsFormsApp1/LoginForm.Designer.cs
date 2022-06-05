@@ -93,6 +93,7 @@
             this.loginbtn.TabIndex = 5;
             this.loginbtn.Text = "login";
             this.loginbtn.UseVisualStyleBackColor = true;
+            this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click);
             // 
             // clearbtn
             // 
@@ -123,6 +124,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "New account";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // LoginForm
             // 

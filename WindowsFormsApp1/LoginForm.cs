@@ -17,5 +17,16 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NewAccountForm newAccountForm = new NewAccountForm();
+            this.Hide();
+            newAccountForm.ShowDialog();
+        }
+
+        private void loginbtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
