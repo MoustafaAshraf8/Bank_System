@@ -35,27 +35,29 @@ namespace WindowsFormsApp1
                 if (conn.State == System.Data.ConnectionState.Open)
                 {
 
-                    string query = "select * from AccessInfo where Username='" + usernameBox.Text.ToString() + "'and Password= '" + passwordBox.Text.ToString() + "'";
+                    string query = "select * from AccessInfo where Username='" + usernameBox.Text.ToString() + "' and Password= '" + passwordBox.Text.ToString() + "'";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     SqlDataReader dtrr = cmd.ExecuteReader();
-
+                    Console.WriteLine(dtrr);
                     if (dtrr.Read())
                     {
                         
-                        int id = (int)dtrr.GetValue(0);
-                        int level = (int)dtrr.GetValue(3);
-
+                        int id = Convert.ToInt32(dtrr.GetValue(0));
+                        int level = Convert.ToInt32(dtrr.GetValue(3));
+                        Console.WriteLine(level);
                         if (level == 1)
                         {
                             User_Form user_Form = new User_Form(id);
-                            this.Hide();
+                            this.Close();
                             user_Form.ShowDialog();
                         }
-                        if (level == 0)
+
+                        else if (level == 0)
                         {
-                            Teller_Form tell = new Teller_Form(id);
-                            this.Hide();
-                            tell.ShowDialog();
+                            
+                            Teller_Form teller_Form = new Teller_Form(id);
+                            this.Close();
+                            teller_Form.ShowDialog();
                         }
 
                         else

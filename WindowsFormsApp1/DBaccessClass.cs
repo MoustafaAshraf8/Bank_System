@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         {
 
         }
-        public static void CreateUser(string username, string password, string name, string nationalID, string address, string phonenumber, string WorkDirection, int accounttype)
+        public static int CreateUser(string username, string password, string name, string nationalID, string address, string phonenumber, string WorkDirection, int accounttype)
         {
             int id = 0;
             //isert the username and password into the AccessInfo table
@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
                     
                     //string query2 = "select * from AccessInfo where Username = '" + username;
 
-                    string query2 = "SELECT * FROM AccessInfo WHERE Username = '"+username+"'";
+                    string query2 = "SELECT * FROM AccessInfo WHERE Username = '"+username.ToString()+"'and Password = '"+password.ToString()+"'";
                     SqlCommand command = new SqlCommand(query2, con);
                     SqlDataReader dataReader = command.ExecuteReader();
                     if (dataReader.Read())
@@ -91,8 +91,8 @@ namespace WindowsFormsApp1
             {
                 Console.WriteLine(ex.Message);
             }
-            
 
+            return id;
             
 
         }

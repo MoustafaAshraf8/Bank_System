@@ -35,28 +35,13 @@ namespace WindowsFormsApp1
                 string username = usernameBox.Text;
                 string password = passwordBox.Text;
                 Teller teller = new Teller();
-                teller.CreateUser(username, password, name, nationalID, address, phonenumber, work, accounttype);
+                int id = teller.CreateUser(username, password, name, nationalID, address, phonenumber, work, accounttype);
 
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\Database.mdf;Integrated Security=True");
-                string query = "SELECT * FROM UserTable WHERE Username = '" + username + "'and Password='"+password+"'";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dtr = cmd.ExecuteReader();
-                if (dtr.Read())
-                {
-                    accountinfoBox.Text = "Account ID : " + dtr.GetValue(4);
-                }
+                
 
-
-
-
-
-
-
-
-
-                LoginForm loginForm = new LoginForm();
+               AccountIDForm accountIDForm = new AccountIDForm(id);
                 this.Hide();
-                loginForm.ShowDialog();
+                accountIDForm.ShowDialog();
             }
 
             catch(Exception ex)

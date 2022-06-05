@@ -27,9 +27,10 @@ namespace WindowsFormsApp1
         {
             DBaccessClass.CheckBalance(ID);
         }
-        public void CreateUser(string username, string password, string name, string nationalID, string address, string phonenumber, string WorkDirection, int accounttype)
+        public int CreateUser(string username, string password, string name, string nationalID, string address, string phonenumber, string WorkDirection, int accounttype)
         {
-            DBaccessClass.CreateUser(username,password,name,nationalID,address,phonenumber,WorkDirection,accounttype);
+            int id = DBaccessClass.CreateUser(username,password,name,nationalID,address,phonenumber,WorkDirection,accounttype);
+            return id;
             
         }
         public void DeleteUser(int ID)

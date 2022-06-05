@@ -25,3 +25,4 @@ C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\obj\Debug\WindowsFormsApp1
 C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.NewAccountForm.resources
 C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\bin\Debug\Database.mdf
 C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\bin\Debug\Database_log.ldf
+C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AccountIDForm.resources
