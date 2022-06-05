@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
                 if (conn.State == System.Data.ConnectionState.Open)
                 {
 
-                    string query = "select * from AccessInfo where Username='" + usernameBox.Text + "'and Password= '" + passwordBox.Text + "'";
+                    string query = "select * from AccessInfo where Username='" + usernameBox.Text.ToString() + "'and Password= '" + passwordBox.Text.ToString() + "'";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     SqlDataReader dtrr = cmd.ExecuteReader();
 
@@ -85,6 +85,11 @@ namespace WindowsFormsApp1
                 conn.Close();
             }
             conn.Close();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }
