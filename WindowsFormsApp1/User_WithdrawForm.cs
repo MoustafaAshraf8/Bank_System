@@ -12,9 +12,11 @@ namespace WindowsFormsApp1
 {
     public partial class User_WithdrawForm : Form
     {
+        public int id;
         public User_WithdrawForm()
         {
             InitializeComponent();
         }
+        
     }
 }

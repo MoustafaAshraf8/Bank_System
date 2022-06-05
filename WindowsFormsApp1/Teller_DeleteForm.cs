@@ -12,9 +12,16 @@ namespace WindowsFormsApp1
 {
     public partial class Teller_DeleteForm : Form
     {
+        private int id;
         public Teller_DeleteForm()
         {
             InitializeComponent();
+        }
+        public Teller_DeleteForm(int n, string x)
+        {
+            InitializeComponent();
+            userlabel.Text = x;
+            id = n;
         }
 
 

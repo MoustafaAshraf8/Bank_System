@@ -12,9 +12,16 @@ namespace WindowsFormsApp1
 {
     public partial class Teller_TransfereForm : Form
     {
+        private int id;
         public Teller_TransfereForm()
         {
             InitializeComponent();
+        }
+        public Teller_TransfereForm(int n, string x)
+        {
+            InitializeComponent();
+            userlabel.Text = x;
+            id = n;
         }
     }
 }

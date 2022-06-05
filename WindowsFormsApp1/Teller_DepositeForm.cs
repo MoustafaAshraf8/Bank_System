@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
     
     public partial class Teller_DepositeForm : Form
     {
-        public int id;
+        private int id;
         public Teller_DepositeForm()
         {
             InitializeComponent();

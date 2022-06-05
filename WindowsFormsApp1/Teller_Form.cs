@@ -15,7 +15,8 @@ namespace WindowsFormsApp1
     {
         SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\Database.mdf;Integrated Security=True");
 
-        public int id;
+        private int id;
+        private string name;
         public Teller_Form()
         {
             InitializeComponent();
@@ -30,8 +31,9 @@ namespace WindowsFormsApp1
                 string query = "select * from PersonTable where id_Person='" + id + "'";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader dtrr = cmd.ExecuteReader();
-                string name = (string)dtrr.GetString(1);
-                label2.Text = name;
+                string x = (string)dtrr.GetString(1);
+                label2.Text = x;
+                name = x;
             }
             id = n;
         }
