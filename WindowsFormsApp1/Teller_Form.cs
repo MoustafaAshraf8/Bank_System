@@ -16,6 +16,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        public Teller_Form(int id)
+        {
+            InitializeComponent();
+        }
 
 
     }

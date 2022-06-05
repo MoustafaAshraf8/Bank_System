@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
                 if (con.State == System.Data.ConnectionState.Open)
 
                 {
-                    string query = "INSERT INTO AccessInfo (Username, Password) VALUES ('" + username.ToString() + "','" + password.ToString() + "')";
+                    string query = "INSERT INTO AccessInfo (Username, Password, Level) VALUES ('" + username.ToString() + "','" + password.ToString() + "','"+1+"')";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
 
