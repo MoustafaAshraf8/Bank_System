@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -35,6 +36,23 @@ namespace WindowsFormsApp1
                 string password = passwordBox.Text;
                 Teller teller = new Teller();
                 teller.CreateUser(username, password, name, nationalID, address, phonenumber, work, accounttype);
+
+                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\Database.mdf;Integrated Security=True");
+                string query = "SELECT * FROM UserTable WHERE Username = '" + username + "'and Password='"+password+"'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader dtr = cmd.ExecuteReader();
+                if (dtr.Read())
+                {
+                    accountinfoBox.Text = "Account ID : " + dtr.GetValue(4);
+                }
+
+
+
+
+
+
+
+
 
                 LoginForm loginForm = new LoginForm();
                 this.Hide();
