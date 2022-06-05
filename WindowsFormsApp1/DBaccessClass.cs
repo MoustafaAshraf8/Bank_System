@@ -28,6 +28,7 @@ namespace WindowsFormsApp1
         }
         public static void CreateUser(string username, string password, string name, string nationalID, string address, string phonenumber, string WorkDirection, int accounttype)
         {
+            int id = 0;
             //isert the username and password into the AccessInfo table
 
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\Database.mdf;Integrated Security=True");
@@ -45,7 +46,7 @@ namespace WindowsFormsApp1
                     /*string query2 = "SELECT id_Randome FROM AccessInfo WHERE Username ='" +username+"'";
                     SqlCommand cmd2 = new SqlCommand(query2, con);
                     */
-                    int id=0;
+                    
                     //string query2 = "select * from AccessInfo where Username = '" + username;
 
                     string query2 = "SELECT * FROM AccessInfo WHERE Username = '"+username+"'";
@@ -66,7 +67,11 @@ namespace WindowsFormsApp1
                     SqlCommand cmd3 = new SqlCommand(query3, con);
                     cmd3.ExecuteNonQuery();
 
-                    string query4 = "INSERT INTO UserTable (id_User, WorkingDirection,AccountType) VALUES ('" + (int)id + "','" + WorkDirection.ToString() + "','" + (int)accounttype + "')";
+                    Random rand = new Random();
+                    string accountid = (char)rand.Next(65,91) + (char)rand.Next(97, 123) + id*2 + (char)rand.Next(97, 123) + (char)rand.Next(65, 91) + "";
+
+
+                    string query4 = "INSERT INTO UserTable (id_User, WorkingDirection,AccountType,AccountID) VALUES ('" + (int)id + "','" + WorkDirection.ToString() + "','" + (int)accounttype + "','"+accountid.ToString()+ "')";
                     SqlCommand cmd4 = new SqlCommand(query4, con);
                     cmd4.ExecuteNonQuery();
                     

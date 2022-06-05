@@ -51,19 +51,22 @@ namespace WindowsFormsApp1
                             this.Hide();
                             user_Form.ShowDialog();
                         }
-                        else
+                        if (level == 0)
                         {
                             Teller_Form tell = new Teller_Form(id);
                             this.Hide();
                             tell.ShowDialog();
                         }
 
+                        else
+                            MessageBox.Show("didnt read a level");
+
                     }
 
                     else
                     {
 
-                        MessageBox.Show("username and password dont match\nreenter or create a new account");
+                        MessageBox.Show("invalid username and password","error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                         usernameBox.Clear();
                         passwordBox.Clear();
                         usernameBox.Focus();
@@ -81,7 +84,7 @@ namespace WindowsFormsApp1
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message,"error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 conn.Close();
             }
             conn.Close();
