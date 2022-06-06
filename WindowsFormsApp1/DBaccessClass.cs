@@ -119,5 +119,20 @@ namespace WindowsFormsApp1
         {
             
         }
+
+        public static string GetName(int id)
+        {
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\Database.mdf;Integrated Security=True");
+            conn.Open();
+            string query = "select * from PersonTable where id_Person=" + id;
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataReader dtr = cmd.ExecuteReader();
+            if (dtr.Read())
+            {
+                return (string)dtr.GetValue(1);
+            }
+
+            else return "abcdef";
+        }
     }
 }

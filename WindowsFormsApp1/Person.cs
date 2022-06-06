@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -57,6 +58,11 @@ namespace WindowsFormsApp1
             NationalID = nationalID;
             Address = address;
             PhoneNumber = phoneNumber;
+        }
+
+        public virtual string GetName(int id)
+        {
+            return "";
         }
 
 

@@ -37,6 +37,10 @@ namespace WindowsFormsApp1
         {
             DBaccessClass.Transfereuser(ID);
         }
+        public override string GetName(int id)
+        {
+            return DBaccessClass.GetName(id);
+        }
 
     }
 }

@@ -8,8 +8,12 @@ namespace WindowsFormsApp1
 {
     class Teller : Employee
     {
+        int id = 0;
         private string Position = "Teller";
 
+        public Teller()
+        { }
+        
 
         public void Deposite(int ID)
         {
@@ -37,5 +41,15 @@ namespace WindowsFormsApp1
         {
             DBaccessClass.DeleteUser(ID);
         }
+
+        public override string GetName(int id)
+        {
+            return DBaccessClass.GetName(id);
+        }
+
+
+
+
+        
     }
 }

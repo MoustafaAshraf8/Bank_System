@@ -25,37 +25,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             id = n;
-            conn.Open();
-            if (conn.State == System.Data.ConnectionState.Open)
-            {
-                try
-                {
-                    //MessageBox.Show("here");
-                    string query = "SELECT * FROM PersonTable WHERE id_Person=" + n;
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    SqlDataReader dtrr = cmd.ExecuteReader();
-                    if (dtrr.Read())
-                    {
+            Teller teller = new Teller();
+            name = teller.GetName(id);
+            label2.Text = name;
 
-
-                        MessageBox.Show("here");
-                        string x = (string)dtrr.GetValue(1);
-
-                        label2.Text = x;
-                        name = x;
-                        
-                    }
-                    dtrr.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                    label2.Text = "a7a";
-                }
-            }
-            conn.Close();
-            
-            
         }
 
         private void logoutbtn_Click(object sender, EventArgs e)
