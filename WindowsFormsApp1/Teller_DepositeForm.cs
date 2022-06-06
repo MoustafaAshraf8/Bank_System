@@ -71,18 +71,18 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void logoutbtn_Click(object sender, EventArgs e)
         {
-            User_Form user_Form = new User_Form();
-            this.Close();
-            user_Form.ShowDialog();
+            LoginForm loginForm = new LoginForm();
+            this.Hide();
+            loginForm.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void backbtn_Click(object sender, EventArgs e)
         {
-            LoginForm login_Form = new LoginForm();
-            this.Close();
-            login_Form.ShowDialog();
+            Teller_Form teller_Form = new Teller_Form();
+            this.Hide();
+            teller_Form.ShowDialog();
         }
     }
 }

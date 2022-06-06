@@ -37,8 +37,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.amountBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.backbtn = new System.Windows.Forms.Button();
+            this.logoutbtn = new System.Windows.Forms.Button();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
@@ -118,37 +118,37 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // backbtn
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(26, 411);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 27);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "<-back";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.backbtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.backbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backbtn.Location = new System.Drawing.Point(26, 411);
+            this.backbtn.Name = "backbtn";
+            this.backbtn.Size = new System.Drawing.Size(84, 27);
+            this.backbtn.TabIndex = 12;
+            this.backbtn.Text = "<-back";
+            this.backbtn.UseVisualStyleBackColor = true;
+            this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
             // 
-            // button3
+            // logoutbtn
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(409, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(69, 39);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "logout";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.logoutbtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.logoutbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutbtn.Location = new System.Drawing.Point(409, 12);
+            this.logoutbtn.Name = "logoutbtn";
+            this.logoutbtn.Size = new System.Drawing.Size(69, 39);
+            this.logoutbtn.TabIndex = 13;
+            this.logoutbtn.Text = "logout";
+            this.logoutbtn.UseVisualStyleBackColor = true;
+            this.logoutbtn.Click += new System.EventHandler(this.logoutbtn_Click);
             // 
             // Teller_DepositeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.logoutbtn);
+            this.Controls.Add(this.backbtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.amountBox);
             this.Controls.Add(this.label5);
@@ -174,8 +174,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox amountBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button backbtn;
+        private System.Windows.Forms.Button logoutbtn;
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.Timer timer1;
     }

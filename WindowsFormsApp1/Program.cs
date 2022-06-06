@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Teller_DepositeForm());
+            Application.Run(new Teller_Form());
         }
     }
 }

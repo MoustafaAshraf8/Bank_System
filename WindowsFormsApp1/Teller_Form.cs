@@ -47,37 +47,37 @@ namespace WindowsFormsApp1
                 if(DepositeRadio.Checked == true)
                 {
                     Teller_DepositeForm depositeForm = new Teller_DepositeForm(id,name);
-                    this.Close();
+                    this.Hide();
                     depositeForm.ShowDialog();
                 }
                 else if(WithdrawRadio.Checked == true)
                 {
                     Teller_WithdrawForm teller_WithdrawForm = new Teller_WithdrawForm(id,name);
-                    this.Close();
+                    this.Hide();
                     teller_WithdrawForm.ShowDialog();
                 }
                 else if(TransfereRadio.Checked == true)
                 {
                     Teller_TransfereForm teller_TransfereForm = new Teller_TransfereForm(id,name);
-                    this.Close();
+                    this.Hide();
                     teller_TransfereForm.ShowDialog();
                 }
                 else if(BalanceRadio.Checked == true)
                 {
                     Teller_BalanceForm teller_BalanceForm = new Teller_BalanceForm(id,name);
-                    this.Close();
+                    this.Hide();
                     teller_BalanceForm.ShowDialog();
                 }
                 else if(CreateRadio.Checked == true)
                 {
                     Teller_CreateForm teller_CreateForm = new Teller_CreateForm(id,name);
-                    this.Close();
+                    this.Hide();
                     teller_CreateForm.ShowDialog();
                 }
                 else if(DeleteRadio.Checked == true)
                 {
                     Teller_DeleteForm teller_DeleteForm = new Teller_DeleteForm(id,name);
-                    this.Close();
+                    this.Hide();
                     teller_DeleteForm.ShowDialog();
                 }
                 else
