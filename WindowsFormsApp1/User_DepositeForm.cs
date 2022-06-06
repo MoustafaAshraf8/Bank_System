@@ -16,5 +16,9 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        public User_DepositeForm(int n,string x)
+        {
+            InitializeComponent();
+        }
     }
 }

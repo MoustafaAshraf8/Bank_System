@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        public User_BalanceForm(int n)
+        public User_BalanceForm(int n,string x)
         {
             InitializeComponent();
 

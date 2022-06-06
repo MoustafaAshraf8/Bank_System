@@ -17,6 +17,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        
+        public User_WithdrawForm(int n,string x)
+        {
+            InitializeComponent();
+        }
+
     }
 }

@@ -35,12 +35,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.logoutbtn = new System.Windows.Forms.Button();
             this.BalanceRadio = new System.Windows.Forms.RadioButton();
             this.DepositeRadio = new System.Windows.Forms.RadioButton();
             this.WithdrawRadio = new System.Windows.Forms.RadioButton();
             this.TransfereRadio = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.proceedbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -113,15 +113,15 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Transfere";
             // 
-            // button5
+            // logoutbtn
             // 
-            this.button5.Location = new System.Drawing.Point(453, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(65, 31);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Logout";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.logoutbtn.Location = new System.Drawing.Point(446, 12);
+            this.logoutbtn.Name = "logoutbtn";
+            this.logoutbtn.Size = new System.Drawing.Size(72, 35);
+            this.logoutbtn.TabIndex = 11;
+            this.logoutbtn.Text = "Logout";
+            this.logoutbtn.UseVisualStyleBackColor = true;
+            this.logoutbtn.Click += new System.EventHandler(this.logoutbtn_Click);
             // 
             // BalanceRadio
             // 
@@ -163,27 +163,28 @@
             this.TransfereRadio.TabStop = true;
             this.TransfereRadio.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // proceedbtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(381, 387);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 33);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Proceed ->";
-            this.button1.UseVisualStyleBackColor = true;
+            this.proceedbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proceedbtn.Location = new System.Drawing.Point(381, 387);
+            this.proceedbtn.Name = "proceedbtn";
+            this.proceedbtn.Size = new System.Drawing.Size(111, 33);
+            this.proceedbtn.TabIndex = 14;
+            this.proceedbtn.Text = "Proceed ->";
+            this.proceedbtn.UseVisualStyleBackColor = true;
+            this.proceedbtn.Click += new System.EventHandler(this.proceedbtn_Click);
             // 
             // User_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.proceedbtn);
             this.Controls.Add(this.TransfereRadio);
             this.Controls.Add(this.WithdrawRadio);
             this.Controls.Add(this.DepositeRadio);
             this.Controls.Add(this.BalanceRadio);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.logoutbtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -207,11 +208,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button logoutbtn;
         private System.Windows.Forms.RadioButton DepositeRadio;
         private System.Windows.Forms.RadioButton BalanceRadio;
         private System.Windows.Forms.RadioButton WithdrawRadio;
         private System.Windows.Forms.RadioButton TransfereRadio;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button proceedbtn;
     }
 }
