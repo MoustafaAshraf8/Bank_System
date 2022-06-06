@@ -103,19 +103,38 @@ namespace WindowsFormsApp1
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public static void ShowBalance(int ID)
+        public static decimal ShowBalance(int id)
         {
+            try
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\Database.mdf;Integrated Security=True");
+                con.Open();
 
+                string query = "select * from UserTable where id_User=" + id;
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataReader dtr = cmd.ExecuteReader();
+
+                if (dtr.Read())
+                {
+                    return (decimal)dtr.GetValue(2);
+                }
+                return 0;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine (ex.Message);
+                return 0;
+            }
         }
-        public static void Depositeuser(int ID)
+        public static void Depositeuser(int id)
         {
             
         }
-        public static void Withdrawuser(int ID)
+        public static void Withdrawuser(int id)
         {
            
         }
-        public static void Transfereuser(int ID)
+        public static void Transfereuser(int id)
         {
             
         }

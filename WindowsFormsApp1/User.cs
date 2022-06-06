@@ -21,9 +21,9 @@ namespace WindowsFormsApp1
             this.Balance = Balance;
         }
 
-        public void ShowBalance(int ID)
+        public decimal ShowBalance(int ID)
         {
-            DBaccessClass.ShowBalance(ID);
+            return DBaccessClass.ShowBalance(ID);
         }
         public void Depositeuser(int ID)
         {

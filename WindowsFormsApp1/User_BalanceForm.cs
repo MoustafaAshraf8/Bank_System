@@ -19,9 +19,24 @@ namespace WindowsFormsApp1
         public User_BalanceForm(int n,string x)
         {
             InitializeComponent();
+            userlabel.Text = x;
+            User user = new User();
+            ballanceBox.Text = "$" + user.ShowBalance(n);
 
-            //acount a = new fixedaccount();
-            //X = a.getballance();
+        }
+
+        private void logoutbtn_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            this.Hide();
+            loginForm.ShowDialog();
+        }
+
+        private void backbtn_Click(object sender, EventArgs e)
+        {
+            User_Form user_Form = new User_Form();
+            this.Hide();
+            user_Form.ShowDialog();
         }
     }
 }

@@ -115,7 +115,7 @@
             // 
             // logoutbtn
             // 
-            this.logoutbtn.Location = new System.Drawing.Point(446, 12);
+            this.logoutbtn.Location = new System.Drawing.Point(346, 6);
             this.logoutbtn.Name = "logoutbtn";
             this.logoutbtn.Size = new System.Drawing.Size(72, 35);
             this.logoutbtn.TabIndex = 11;
@@ -166,7 +166,7 @@
             // proceedbtn
             // 
             this.proceedbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.proceedbtn.Location = new System.Drawing.Point(381, 387);
+            this.proceedbtn.Location = new System.Drawing.Point(307, 405);
             this.proceedbtn.Name = "proceedbtn";
             this.proceedbtn.Size = new System.Drawing.Size(111, 33);
             this.proceedbtn.TabIndex = 14;
@@ -178,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 450);
+            this.ClientSize = new System.Drawing.Size(430, 450);
             this.Controls.Add(this.proceedbtn);
             this.Controls.Add(this.TransfereRadio);
             this.Controls.Add(this.WithdrawRadio);

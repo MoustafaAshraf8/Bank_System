@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Teller_CreateForm());
+            Application.Run(new User_BalanceForm(50,"sdc"));
         }
     }
 }
