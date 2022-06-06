@@ -15,8 +15,8 @@ namespace WindowsFormsApp1
     {
         SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\Database.mdf;Integrated Security=True");
 
-        private int id;
-        private string name;
+        private int id = 0;
+        private string name = "name";
         public Teller_Form()
         {
             InitializeComponent();
@@ -24,18 +24,38 @@ namespace WindowsFormsApp1
         public Teller_Form(int n)
         {
             InitializeComponent();
+            id = n;
             conn.Open();
             if (conn.State == System.Data.ConnectionState.Open)
             {
+                try
+                {
+                    //MessageBox.Show("here");
+                    string query = "SELECT * FROM PersonTable WHERE id_Person=" + n;
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataReader dtrr = cmd.ExecuteReader();
+                    if (dtrr.Read())
+                    {
 
-                string query = "select * from PersonTable where id_Person='" + id + "'";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader dtrr = cmd.ExecuteReader();
-                string x = (string)dtrr.GetString(1);
-                label2.Text = x;
-                name = x;
+
+                        MessageBox.Show("here");
+                        string x = (string)dtrr.GetValue(1);
+
+                        label2.Text = x;
+                        name = x;
+                        
+                    }
+                    dtrr.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    label2.Text = "a7a";
+                }
             }
-            id = n;
+            conn.Close();
+            
+            
         }
 
         private void logoutbtn_Click(object sender, EventArgs e)

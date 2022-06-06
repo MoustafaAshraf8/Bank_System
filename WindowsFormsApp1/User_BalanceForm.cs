@@ -16,5 +16,12 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        public User_BalanceForm(int n)
+        {
+            InitializeComponent();
+
+            //acount a = new fixedaccount();
+            //X = a.getballance();
+        }
     }
 }

@@ -30,38 +30,43 @@ namespace WindowsFormsApp1
         private void loginbtn_Click(object sender, EventArgs e)
         {
             conn.Open();
+            SqlDataReader dtrr = null;
             try
             {
                 if (conn.State == System.Data.ConnectionState.Open)
                 {
 
                     string query = "select * from AccessInfo where Username='" + usernameBox.Text.ToString() + "' and Password= '" + passwordBox.Text.ToString() + "'";
+                   
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    SqlDataReader dtrr = cmd.ExecuteReader();
+                    dtrr = cmd.ExecuteReader();
                     Console.WriteLine(dtrr);
                     if (dtrr.Read())
                     {
                         
                         int id = Convert.ToInt32(dtrr.GetValue(0));
                         int level = Convert.ToInt32(dtrr.GetValue(3));
-                        Console.WriteLine(level);
+                        
                         if (level == 1)
                         {
+
                             User_Form user_Form = new User_Form(id);
                             this.Close();
                             user_Form.ShowDialog();
                         }
 
-                        else if (level == 0)
+                        else if (level == 15)
                         {
-                            
+
                             Teller_Form teller_Form = new Teller_Form(id);
+                            MessageBox.Show(Convert.ToString(level));
                             this.Close();
                             teller_Form.ShowDialog();
                         }
-
                         else
-                            MessageBox.Show("didnt read a level");
+                            MessageBox.Show("invalid username or password");
+
+                        
 
                     }
 
@@ -74,7 +79,7 @@ namespace WindowsFormsApp1
                         usernameBox.Focus();
                     }
                     
-                    dtrr.Close();
+                    
 
                 }
                 else
@@ -87,9 +92,14 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message,"error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                
+            }
+            finally
+            {
+                dtrr.Close();
                 conn.Close();
             }
-            conn.Close();
+            
 
         }
 
