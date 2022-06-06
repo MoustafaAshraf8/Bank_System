@@ -22,20 +22,23 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Moustafa\Desktop\BankSystem\WindowsFormsApp1\Database.mdf;Integrated Security=True");
-            string query = "SELECT * FROM UserTable WHERE id_User = '" + n + "'";
+            conn.Open();
+            string query = "SELECT * FROM UserTable WHERE id_User =" + n;
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataReader dtr = cmd.ExecuteReader();
             if (dtr.Read())
             {
-                accountinfoBox.Text = (string)dtr.GetValue(4);
+                accountidBox.Text = (string)dtr.GetValue(4);
             }
+           dtr.Close();
+           conn.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm();
+            Teller_Form teller_Form = new Teller_Form();
             this.Hide();
-            loginForm.ShowDialog();
+            teller_Form.Show();
         }
     }
 }

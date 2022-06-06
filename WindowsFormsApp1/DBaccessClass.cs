@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
                     cmd3.ExecuteNonQuery();
 
                     Random rand = new Random();
-                    string accountid = (char)rand.Next(65,91) + (char)rand.Next(97, 123) + id*2 + (char)rand.Next(97, 123) + (char)rand.Next(65, 91) + "";
+                    string accountid = (char)rand.Next(65,91) + (char)rand.Next(97, 123) + id*2 + (char)rand.Next(97, 123) + (char)rand.Next(65, 91)+"";
 
 
                     string query4 = "INSERT INTO UserTable (id_User, WorkingDirection,AccountType,AccountID) VALUES ('" + (int)id + "','" + WorkDirection.ToString() + "','" + (int)accounttype + "','"+accountid.ToString()+ "')";
